@@ -23,12 +23,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
   <!-- Navbar -->
-  @include('admin.template.navbar')
+  @include('petugas.template.navbar')
   <!-- /.navbar -->
 
 
   <!-- Main Sidebar Container -->
-  @include('admin.template.sidebar')
+  @include('petugas.template.sidebar')
 
 
   <!-- Content Wrapper. Contains page content -->
@@ -74,7 +74,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
   <!-- Main Footer -->
- @include('admin.template.footer')
+ @include('petugas.template.footer')
 
 
 <!-- REQUIRED SCRIPTS -->
