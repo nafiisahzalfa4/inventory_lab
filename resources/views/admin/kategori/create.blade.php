@@ -8,7 +8,7 @@
                 Tambah Kategori
             </div>
 
-            <form action="{{ route('kategori.store')}}" method="POST">
+            <form action="{{ route('admin.kategori.store')}}" method="POST">
                 {{ csrf_field() }}
 
                 <div class="card-body table-responsive">

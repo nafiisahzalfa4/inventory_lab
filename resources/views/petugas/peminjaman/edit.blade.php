@@ -1,5 +1,4 @@
-@extends('admin.template.layout')
-@section('title', 'Perbarui Peminjaman')
+@extends('petugas.template.layout')
 @section('content')
 <div class="row">
     <div class="col-6">
@@ -8,10 +7,11 @@
                 Edit Peminjaman
             </div>
 
-            <div class="card-body table-responsive">
-                <form action="{{ route('admin.peminjaman.update', $data->id)}}" method="POST">
-                    {{ csrf_field() }}
-                    @method('PUT')
+            <form action="{{ route('petugas.peminjaman.update', $data->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
+                <div class="card-body">
 
                     <div class="mb-3">
                         <label>Alat</label>
@@ -25,33 +25,22 @@
                     </div>
 
                     <div class="mb-3">
-                        <label>Petugas</label>
-                        <select name="petugas_id" class="form-control">
-                            @foreach ($petugas as $p)
-                                <option value="{{ $p->id }}" {{ $data->petugas_id == $p->id ? 'selected' : '' }}>
-                                    {{ $p->nama_petugas }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
                         <label>Nama Peminjam</label>
                         <input type="text" name="nama_peminjam" class="form-control" value="{{ $data->nama_peminjam }}">
                     </div>
 
                     <div class="mb-3">
-                        <label>Jumlah Pinjam</label>
+                        <label>Jumlah</label>
                         <input type="number" name="jumlah_pinjam" class="form-control" value="{{ $data->jumlah_pinjam }}">
                     </div>
 
                     <div class="mb-3">
-                        <label>Tanggal Pinjam</label>
+                        <label>Tgl Pinjam</label>
                         <input type="date" name="tgl_pinjam" class="form-control" value="{{ $data->tgl_pinjam }}">
                     </div>
 
                     <div class="mb-3">
-                        <label>Tanggal Kembali</label>
+                        <label>Tgl Kembali</label>
                         <input type="date" name="tgl_kembali" class="form-control" value="{{ $data->tgl_kembali }}">
                     </div>
 
@@ -63,13 +52,13 @@
                         </select>
                     </div>
 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-success btn-sm">Update</button>
-                    </div>
+                </div>
 
-                </form>
-            </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success btn-sm">Update</button>
+                </div>
 
+            </form>
         </div>
     </div>
 </div>

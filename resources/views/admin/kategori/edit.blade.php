@@ -9,7 +9,7 @@
             </div>
 
             <div class="card-body table-responsive">
-                <form action="{{ route('kategori.update', $data->id)}}" method="POST">
+                <form action="{{ route('admin.kategori.update', $data->id)}}" method="POST">
                     {{ csrf_field() }}
                     @method('PUT')
 

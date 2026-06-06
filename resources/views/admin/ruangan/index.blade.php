@@ -15,7 +15,7 @@
                             <th>Nama Ruangan</th>
                             <th>Penanggung Jawab</th>
                             <th>
-                                <a href="{{ route('ruangan.create') }}" class="btn btn-primary btn-sm">Tambah Ruangan</a>
+                                <a href="{{ route('admin.ruangan.create') }}" class="btn btn-primary btn-sm">Tambah Ruangan</a>
                             </th>
                         </tr>
                     </thead>

@@ -8,7 +8,7 @@
                 Tambah Alat
             </div>
 
-            <form action="{{ route('alat.store')}}" method="POST">
+            <form action="{{ route('admin.alat.store')}}" method="POST">
                 {{ csrf_field() }}
 
                 <div class="card-body table-responsive">

@@ -17,7 +17,7 @@
                             <th>Telepon</th>
                             <th>Email</th>
                             <th>
-                                <a href="{{ route('petugas.create') }}" class="btn btn-primary btn-sm">Tambah Petugas</a>
+                                <a href="{{ route('admin.petugas.create') }}" class="btn btn-primary btn-sm">Tambah Petugas</a>
                             </th>
                         </tr>
                     </thead>

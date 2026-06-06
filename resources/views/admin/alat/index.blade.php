@@ -19,7 +19,7 @@
                             <th>Stok</th>
                             <th>Kondisi</th>
                             <th>
-                                <a href="{{ route('alat.create') }}" class="btn btn-primary btn-sm">Tambah Alat</a>
+                                <a href="{{ route('admin.alat.create') }}" class="btn btn-primary btn-sm">Tambah Alat</a>
                             </th>
                         </tr>
                     </thead>

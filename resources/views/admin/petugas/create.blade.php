@@ -8,7 +8,7 @@
                 Tambah Petugas
             </div>
 
-            <form action="{{ route('petugas.store')}}" method="POST">
+            <form action="{{ route('admin.petugas.store')}}" method="POST">
                 {{ csrf_field() }}
 
                 <div class="card-body table-responsive">

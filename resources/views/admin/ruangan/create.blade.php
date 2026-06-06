@@ -8,7 +8,7 @@
                 Tambah Ruangan
             </div>
 
-            <form action="{{ route('ruangan.store')}}" method="POST">
+            <form action="{{ route('admin.ruangan.store')}}" method="POST">
                 {{ csrf_field() }}
 
                 <div class="card-body table-responsive">

@@ -15,7 +15,7 @@
                             <th>Nama Kategori</th>
                             <th>Deskripsi</th>
                             <th>
-                                <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-sm">Tambah Kategori</a>
+                                <a href="{{ route('admin.kategori.create') }}" class="btn btn-primary btn-sm">Tambah Kategori</a>
                             </th>
                         </tr>
                     </thead>
@@ -26,7 +26,7 @@
                             <td>{{ $v->nama_kategori }}</td>
                             <td>{{ $v->deskripsi }}</td>
                             <td>
-                                <form action="{{ route('kategori.destroy', $v->id) }}" method="POST" style="display:inline">
+                                <form action="{{ route('admin.kategori.destroy', $v->id) }}" method="POST" style="display:inline">
                                     {{ csrf_field() }}
                                     @method('DELETE')
 

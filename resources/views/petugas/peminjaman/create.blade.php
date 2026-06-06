@@ -1,5 +1,4 @@
-@extends('admin.template.layout')
-@section('title', 'Tambah Peminjaman')
+@extends('petugas.template.layout')
 @section('content')
 <div class="row">
     <div class="col-6">
@@ -8,33 +7,20 @@
                 Tambah Peminjaman
             </div>
 
-            <form action="{{ route('admin.peminjaman.store')}}" method="POST">
-                {{ csrf_field() }}
+            <form action="{{ route('petugas.peminjaman.store') }}" method="POST">
+                @csrf
 
-                <div class="card-body table-responsive">
+                <div class="card-body">
 
                     <div class="mb-3">
                         <label>Alat</label>
                         <select name="alat_id" class="form-control">
-                            <option value="">-- pilih alat --</option>
+                            <option value="">-- Pilih Alat --</option>
                             @foreach ($alat as $a)
-                                <option value="{{ $a->id }}">{{ $a->nama_alat }}</option>
+                                <option value="{{ $a->id }}">{{ $a->nama_alat }} (Stok: {{ $a->stok }})</option>
                             @endforeach
                         </select>
                         @error('alat_id')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Petugas</label>
-                        <select name="petugas_id" class="form-control">
-                            <option value="">-- pilih petugas --</option>
-                            @foreach ($petugas as $p)
-                                <option value="{{ $p->id }}">{{ $p->nama_petugas }}</option>
-                            @endforeach
-                        </select>
-                        @error('petugas_id')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
@@ -58,9 +44,6 @@
                     <div class="mb-3">
                         <label>Tanggal Pinjam</label>
                         <input type="date" name="tgl_pinjam" class="form-control">
-                        @error('tgl_pinjam')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
                     </div>
 
                     <div class="mb-3">
@@ -68,13 +51,13 @@
                         <input type="date" name="tgl_kembali" class="form-control">
                     </div>
 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-sm">Save</button>
-                    </div>
-
                 </div>
-            </form>
 
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>
